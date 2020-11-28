@@ -1,0 +1,21 @@
+<br><br>
+<div class="container animate__animated animate__backInDown">
+    <div class="row mt-4 ml-4">
+        <h4>Revise los servicios y productos que tenemos para usted (hardware, software)</h4>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 p-4" *ngFor="let product of products">
+            <div class="card card-post">
+                <div class="card-header">
+                    <h6>{{ product.title }}</h6>
+                </div>
+                <img [src]="product.imageUrl" class="img-card-top w-100 prod" (click)="onProductClick( product )">
+                <div class="card-body">
+                    <p>{{ product.description | slice: 0:150 }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

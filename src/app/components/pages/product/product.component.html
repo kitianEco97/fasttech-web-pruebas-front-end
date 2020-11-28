@@ -1,0 +1,23 @@
+<br><br><br>
+<div class="container animate__animated animate__backInLeft animate__delay">
+    <div class="row backInLeft">
+        <div class="col-md-12 thumb-class">
+            <div class="card-header">
+                {{ product.title }}
+            </div>
+            <div class="thumb-class">
+                <img [src]="product.imageUrl" alt="product.title">
+            </div>
+            <div class="card-body">
+                {{ product.description }}
+            </div>
+            <button class="btn btn-outline-primary btn-block mb-4" (click)="onRegresar()">
+                Regresar
+            </button>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+</div>

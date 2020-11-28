@@ -1,0 +1,28 @@
+<!-- Slider main container -->
+<div class="swiper-container animated fadeIn fast">
+
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div *ngFor="let post of posts" class="swiper-slide text-center" [ngStyle]="{
+            'background-size': 'cover',
+            'background-image': 'url(http://res.cloudinary.com/dbgdqdgds/image/upload/v1605821009/'+post.public_id+')'}">
+            <div class="col-sm mt-5 bottom-0 text-center">
+
+            </div>
+            <div class="post-description text-white">
+                <h3 class="text-white">{{post.title}}</h3>
+                <p>
+                    {{ post.description | slice:0:130 }}...
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
+    <div (click)="onSlideNext()" class="swiper-button-next"></div>
+
+</div>

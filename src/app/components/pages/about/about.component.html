@@ -1,0 +1,18 @@
+<br><br>
+<div class="container animate__animated animate__backInUp">
+
+    <div class="row mt-4 ml-4">
+        <h4>¿Qué es Fasttech?</h4>
+    </div>
+    <div class="col-md-12 p-4" *ngFor="let about of abouts">
+        <div class="card card-post">
+            <div class="card-header">
+                <h6>{{ about.title }}</h6>
+            </div>
+            <div class="card-body">
+                <p>{{ about.description }}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
